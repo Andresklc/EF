@@ -1,6 +1,6 @@
 ﻿namespace EF
 {
-    partial class Form1
+    partial class Form_Inicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -73,13 +73,13 @@
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             // 
             // productosToolStripMenuItem1
             // 
             this.productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
-            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.productosToolStripMenuItem1.Text = "Productos";
             // 
             // ventasToolStripMenuItem
@@ -167,15 +167,15 @@
             this.vercionToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.vercionToolStripMenuItem.Text = "Vercion";
             // 
-            // Form1
+            // Form_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Form_Inicio";
+            this.Text = "APP-G_16";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
