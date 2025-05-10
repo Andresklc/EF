@@ -173,11 +173,11 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvClientes.Location = new System.Drawing.Point(69, 278);
+            this.dgvClientes.Location = new System.Drawing.Point(59, 278);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(598, 150);
+            this.dgvClientes.Size = new System.Drawing.Size(620, 160);
             this.dgvClientes.TabIndex = 18;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
