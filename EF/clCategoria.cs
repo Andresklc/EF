@@ -9,11 +9,17 @@ namespace EF
 {
     internal class clCategoria
     {
-        [DisplayName("ID")] public int G16_Id { get; set; }
-        [DisplayName("Nombre")] public int G16_Nombre { get; set; }
-        [DisplayName("Descripcion")] public int G16_Descripcion { get; set; }
+     public int G16_Id { get; set; }
+     public string G16_Nombre { get; set; }
 
-        List<clCategoria> G16_cat =new List<clCategoria>();
-
+       public static List<clCategoria> G16_cat =new List<clCategoria>();
+        private static int G16_contador = 1;
+        public static void agregarCategoria(string G16_N){
+            G16_cat.Add(new clCategoria {
+                G16_Id= G16_contador,
+                G16_Nombre = G16_N,
+            });
+            G16_contador++;
+        }
     }
 }

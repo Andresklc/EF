@@ -50,39 +50,42 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(378, 22);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(72, 26);
             this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(378, 56);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(72, 26);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(378, 91);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(72, 26);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(84, 60);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Location = new System.Drawing.Point(96, 60);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(267, 20);
+            this.txtNombre.Size = new System.Drawing.Size(255, 20);
             this.txtNombre.TabIndex = 9;
             // 
             // label1
@@ -94,7 +97,6 @@
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Nombre";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -105,7 +107,6 @@
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Apellidos";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -119,10 +120,10 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(84, 26);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI.Location = new System.Drawing.Point(96, 26);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(267, 20);
+            this.txtDNI.Size = new System.Drawing.Size(255, 20);
             this.txtDNI.TabIndex = 13;
             // 
             // label4
@@ -137,21 +138,22 @@
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(84, 125);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCelular.Location = new System.Drawing.Point(96, 125);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(2);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(267, 20);
+            this.txtCelular.Size = new System.Drawing.Size(255, 20);
             this.txtCelular.TabIndex = 15;
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(378, 121);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(72, 26);
             this.btnLimpiar.TabIndex = 16;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // label5
             // 
@@ -168,10 +170,13 @@
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(35, 219);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(465, 162);
             this.dgvClientes.TabIndex = 18;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
@@ -191,9 +196,9 @@
             this.groupBox1.Controls.Add(this.txtDNI);
             this.groupBox1.Controls.Add(this.txtApellidos);
             this.groupBox1.Location = new System.Drawing.Point(35, 40);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(465, 163);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
@@ -201,10 +206,10 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(84, 95);
+            this.txtApellidos.Location = new System.Drawing.Point(96, 95);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(267, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(255, 20);
             this.txtApellidos.TabIndex = 9;
             // 
             // frmCLientes
@@ -215,11 +220,10 @@
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCLientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCLientes";
-            this.Load += new System.EventHandler(this.frmCLientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

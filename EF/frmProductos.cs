@@ -16,13 +16,14 @@ namespace EF
         {
             InitializeComponent();
             mostrar();
-
+            listaCat();
+          
         }
         public void mostrar()
         {
             try { 
             dgvProductos.DataSource = null;
-            dgvProductos.DataSource = clProductos.Pro;
+            dgvProductos.DataSource = clProductos.G16_Pro;
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProductos.ClearSelection();
             }
@@ -33,28 +34,42 @@ namespace EF
         }// muestra la tabla
         public void limpiar()
         {
-            txtCodigo.Clear();
-            txtNombre.Clear();
-            txtPrecio.Clear();
-            txtCodigo.Clear();
-            cbxCategoria.Text = "";
-            txtCategoria.Clear();
-            btnRegistrar.Text = "Registrar";
-            dgvProductos.ClearSelection();
+            try
+            {
+                txtCodigo.Clear();
+                txtNombre.Clear();
+                txtPrecio.Clear();
+                txtCodigo.Clear();
+                cbxCategoria.SelectedIndex = -1;
+                txtCategoria.Clear();
+                btnRegistrar.Text = "Registrar";
+                dgvProductos.ClearSelection();
+            }
+            catch (Exception G16_ex)
+            {
+                MessageBox.Show(G16_ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }//limpia los cuadros de texto
+        public void listaCat()
+        {
+            cbxCategoria.DataSource = null;
+            cbxCategoria.DataSource = clCategoria.G16_cat;
+            cbxCategoria.DisplayMember = "G16_Nombre";  // Lo que se muestra
+            cbxCategoria.SelectedIndex = -1;
+        }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
-                var G16_proExisCo = clProductos.Pro.FirstOrDefault(G16_p => G16_p.G16_Codigo == txtCodigo.Text.Trim());
-                var G16_proExisNo = clProductos.Pro.FirstOrDefault(G16_p => G16_p.G16_Nombre == txtNombre.Text.Trim() &&
+                var G16_proExisCo = clProductos.G16_Pro.FirstOrDefault(G16_p => G16_p.G16_Codigo == txtCodigo.Text.Trim());
+                var G16_proExisNo = clProductos.G16_Pro.FirstOrDefault(G16_p => G16_p.G16_Nombre == txtNombre.Text.Trim() &&
                                                                         G16_p.G16_Categoria == cbxCategoria.Text.Trim());
                 if (G16_proExisCo != null)
                 {
                         G16_proExisCo.G16_Nombre = txtNombre.Text;
                         G16_proExisCo.G16_Categoria = cbxCategoria.Text;
                         G16_proExisCo.G16_Precio = Convert.ToDouble(txtPrecio.Text);
-                        MessageBox.Show("Editado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show("Editado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -112,7 +127,7 @@ namespace EF
                     limpiar();
                     mostrar();
                 }
-                var G16_Filtro = clProductos.Pro.Where(G16_p =>
+                var G16_Filtro = clProductos.G16_Pro.Where(G16_p =>
                     (string.IsNullOrEmpty(txtNombre.Text) || G16_p.G16_Nombre.IndexOf(txtNombre.Text,
                     StringComparison.OrdinalIgnoreCase) >= 0) &&
                     (string.IsNullOrEmpty(cbxCategoria.Text) || G16_p.G16_Categoria.Equals(cbxCategoria.Text,
@@ -136,7 +151,7 @@ namespace EF
                 MessageBox.Show("Seleccione el producto que desea eliminar.");
                 return;
             }
-                var G16_Producto = clProductos.Pro.FirstOrDefault(p => p.G16_Codigo.Equals(G16_Code, 
+                var G16_Producto = clProductos.G16_Pro.FirstOrDefault(p => p.G16_Codigo.Equals(G16_Code, 
                 StringComparison.OrdinalIgnoreCase));
             if (G16_Producto != null)
             {
@@ -144,7 +159,7 @@ namespace EF
                     "Confirmar eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (G16_SiNo == DialogResult.Yes)
                 {
-                    clProductos.Pro.Remove(G16_Producto);
+                    clProductos.G16_Pro.Remove(G16_Producto);
                     MessageBox.Show("Producto eliminado correctamente.");
                     mostrar();
                     limpiar();
@@ -154,6 +169,21 @@ namespace EF
             catch(Exception G16_ex) 
             {
                 MessageBox.Show(G16_ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+        private void btnAgCategoria_Click(object sender, EventArgs e)
+        {
+            var G16_catExisNo = clCategoria.G16_cat.FirstOrDefault(G16_p => G16_p.G16_Nombre == txtCategoria.Text.Trim());
+            if (G16_catExisNo == null)
+            {
+                clCategoria.agregarCategoria(txtCategoria.Text);
+                txtCategoria.Clear();
+                listaCat();
+            }
+            else
+            {
+                MessageBox.Show($"Categoria '{txtCategoria.Text}' ya existente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtCategoria.Clear();
             }
         }
     } 

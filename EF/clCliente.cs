@@ -15,20 +15,15 @@ namespace EF
         [DisplayName("Celular")] public int G16_Celular { get; set; }
 
 
-        public static List<clCliente> G16_Pro = new List<clCliente>();
+        public static List<clCliente> G16_Cli = new List<clCliente>();
         public static void agregarCliente(int G16_DN,string G16_No, string G16_Ap, int G16_Cel)
         {
-            G16_Pro.Add(new clCliente
-            {
+            G16_Cli.Add(new clCliente{
                 G16_DNI = G16_DN,
                 G16_Nombres = G16_No,
-                G16_Apellidos = G16_No,
+                G16_Apellidos = G16_Ap,
                 G16_Celular = G16_Cel             
             });
-
         }
-
-
-
     }
 }

@@ -31,6 +31,19 @@ namespace EF
             clProductos.agregarProducto("Café en lata", "Bebida", 4);
             clProductos.agregarProducto("Zanahoria", "Verdura", 1.8);
             clProductos.agregarProducto("Uva", "Fruta", 5.5);
+            clCategoria.agregarCategoria("Fruta");
+            clCategoria.agregarCategoria("Bebida");
+            clCategoria.agregarCategoria("Verdura");
+            clCliente.agregarCliente(78456833,"Mario","Cortez",965423679);
+            clCliente.agregarCliente(74581236, "Lucía", "Ramírez", 912345678);
+            clCliente.agregarCliente(73849561, "Carlos", "Quispe", 987654321);
+            clCliente.agregarCliente(76382945, "Andrea", "Flores", 923456789);
+            clCliente.agregarCliente(72836459, "Jorge", "Gómez", 934567891);
+            clCliente.agregarCliente(75681234, "Valeria", "Rojas", 945678123);
+            clCliente.agregarCliente(76983456, "Luis", "Fernández", 956789234);
+            clCliente.agregarCliente(71234567, "Camila", "Mendoza", 967891345);
+            clCliente.agregarCliente(70123456, "Pedro", "Sánchez", 978912456);
+            clCliente.agregarCliente(72345678, "Ana", "Delgado", 989123567);
         }
 
         private void productosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -39,5 +52,10 @@ namespace EF
             G16_FormProduc.Show();
         }
 
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCLientes G16_FormCLien= new frmCLientes();
+            G16_FormCLien.Show();
+        }
     }
 }

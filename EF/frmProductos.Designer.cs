@@ -184,6 +184,7 @@
             this.btnAgCategoria.TabIndex = 21;
             this.btnAgCategoria.Text = "<-";
             this.btnAgCategoria.UseVisualStyleBackColor = true;
+            this.btnAgCategoria.Click += new System.EventHandler(this.btnAgCategoria_Click);
             // 
             // cbxCategoria
             // 
