@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EF
 {
@@ -64,6 +65,18 @@ namespace EF
         {
             frmRVentas G16_FormVen = new frmRVentas();
             G16_FormVen.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmExportarClientes G16_ForExCli = new FrmExportarClientes();
+            G16_ForExCli.Show();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmExportarProductos G16_ForExPro=new FrmExportarProductos();
+            G16_ForExPro.Show();
         }
     }
 }
