@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelecion
@@ -105,7 +107,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(132, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 22);
+            this.label4.Size = new System.Drawing.Size(170, 24);
             this.label4.TabIndex = 2;
             this.label4.Text = "Exportar Clientes";
             // 
@@ -119,11 +121,23 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EF.Properties.Resources.UPN;
+            this.pictureBox1.Location = new System.Drawing.Point(400, 263);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmExportarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(449, 325);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -135,6 +149,7 @@
             this.Controls.Add(this.btnSelecion);
             this.Name = "FrmExportarClientes";
             this.Text = "FrmExportarClientes";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +166,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

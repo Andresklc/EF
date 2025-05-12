@@ -35,7 +35,7 @@ namespace EF
             clCategoria.agregarCategoria("Fruta");
             clCategoria.agregarCategoria("Bebida");
             clCategoria.agregarCategoria("Verdura");
-            clCliente.agregarCliente(78456833,"Mario","Cortez",965423679);
+            clCliente.agregarCliente(78456833, "Mario", "Cortez", 965423679);
             clCliente.agregarCliente(74581236, "Lucía", "Ramírez", 912345678);
             clCliente.agregarCliente(73849561, "Carlos", "Quispe", 987654321);
             clCliente.agregarCliente(76382945, "Andrea", "Flores", 923456789);
@@ -55,11 +55,11 @@ namespace EF
 
         private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmCLientes G16_FormCLien= new frmCLientes();
+            frmCLientes G16_FormCLien = new frmCLientes();
             G16_FormCLien.Show();
         }
 
-        
+
 
         private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -75,8 +75,24 @@ namespace EF
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmExportarProductos G16_ForExPro=new FrmExportarProductos();
+            FrmExportarProductos G16_ForExPro = new FrmExportarProductos();
             G16_ForExPro.Show();
+        }
+
+        private void soporteTecnicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string G16_mensaje ="Contactar a:\n"+
+             "Larrea Cortez, Luis Andres - N00446667@upn.pe (Lider)\n" +
+             "Ortega Valverde, Yulissa Stephany - N00366132@upn.pe\n" +
+             "Leon Ccahuana, Jeffrey Carlos - N00423806@upn.pe\n" +
+             "Huancollo Fuentes, Luis Angelo - N00480703@upn.pe";
+
+            MessageBox.Show(G16_mensaje, "Grupo 16_Lista de Alumnos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void vercionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("VERSION G16 0.1 \nSi ve esto profe un saludo no eh dormido en 2 dias by Andres", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

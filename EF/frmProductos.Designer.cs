@@ -45,8 +45,11 @@
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -206,20 +209,44 @@
             // dgvProductos
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(27, 227);
+            this.dgvProductos.Location = new System.Drawing.Point(27, 198);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 45;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(433, 148);
+            this.dgvProductos.Size = new System.Drawing.Size(433, 177);
             this.dgvProductos.TabIndex = 22;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EF.Properties.Resources.UPN;
+            this.pictureBox1.Location = new System.Drawing.Point(466, 379);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(147, 6);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(213, 25);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Registro Productos";
             // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(500, 408);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
@@ -228,6 +255,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +279,7 @@
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.Button btnAgCategoria;
         private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

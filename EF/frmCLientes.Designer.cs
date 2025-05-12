@@ -43,8 +43,10 @@
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistrar
@@ -212,11 +214,23 @@
             this.txtApellidos.Size = new System.Drawing.Size(255, 20);
             this.txtApellidos.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EF.Properties.Resources.UPN;
+            this.pictureBox1.Location = new System.Drawing.Point(502, 387);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmCLientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(533, 414);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
@@ -227,6 +241,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +263,6 @@
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

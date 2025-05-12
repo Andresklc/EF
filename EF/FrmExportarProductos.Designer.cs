@@ -37,6 +37,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDireccionPC = new System.Windows.Forms.TextBox();
             this.btnSelecion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
@@ -55,7 +57,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(132, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 22);
+            this.label4.Size = new System.Drawing.Size(189, 24);
             this.label4.TabIndex = 8;
             this.label4.Text = "Exportar Productos";
             // 
@@ -119,11 +121,23 @@
             this.btnSelecion.UseVisualStyleBackColor = true;
             this.btnSelecion.Click += new System.EventHandler(this.btnSelecion_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EF.Properties.Resources.UPN;
+            this.pictureBox1.Location = new System.Drawing.Point(400, 263);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmExportarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(451, 322);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -136,6 +150,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmExportarProductos";
             this.Text = "FrmExportarProductos";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +167,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDireccionPC;
         private System.Windows.Forms.Button btnSelecion;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

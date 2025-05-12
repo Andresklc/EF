@@ -44,9 +44,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRVentas)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRegistrarVentas
@@ -218,11 +220,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Producto";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EF.Properties.Resources.UPN;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 458);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmRVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(603, 493);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label5);
@@ -236,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRVentas)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +274,6 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnRegistrarVenta;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
