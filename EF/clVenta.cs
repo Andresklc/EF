@@ -14,6 +14,7 @@ namespace EF
 
         public double G16_PrecioTotal { get; set; }// Precio total de la venta
 
+        public static List<clVenta> G16_Ventas = new List<clVenta>();
         public clVenta(int G16_idVen, int G16_dni, List<clProductoVendido> G16_prod)
         {
             G16_IdVenta = G16_idVen;

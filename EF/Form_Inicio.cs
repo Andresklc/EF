@@ -58,7 +58,9 @@ namespace EF
             G16_FormCLien.Show();
         }
 
-        private void registrarVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmRVentas G16_FormVen = new frmRVentas();
             G16_FormVen.Show();
