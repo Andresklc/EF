@@ -75,14 +75,14 @@
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(198, 24);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(141, 24);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // productosToolStripMenuItem1
             // 
             this.productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
-            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(198, 24);
+            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(141, 24);
             this.productosToolStripMenuItem1.Text = "Productos";
             this.productosToolStripMenuItem1.Click += new System.EventHandler(this.productosToolStripMenuItem1_Click);
             // 
@@ -97,8 +97,9 @@
             // registrarVentaToolStripMenuItem
             // 
             this.registrarVentaToolStripMenuItem.Name = "registrarVentaToolStripMenuItem";
-            this.registrarVentaToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.registrarVentaToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.registrarVentaToolStripMenuItem.Text = "Registrar Venta";
+            this.registrarVentaToolStripMenuItem.Click += new System.EventHandler(this.registrarVentaToolStripMenuItem_Click);
             // 
             // almacenToolStripMenuItem
             // 

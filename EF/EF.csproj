@@ -49,6 +49,8 @@
     <Compile Include="clCategoria.cs" />
     <Compile Include="clCliente.cs" />
     <Compile Include="clProductos.cs" />
+    <Compile Include="clProductoVendido.cs" />
+    <Compile Include="clVenta.cs" />
     <Compile Include="Form_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>

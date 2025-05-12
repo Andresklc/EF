@@ -4,9 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+
+
 
 namespace EF
 {
@@ -49,6 +54,48 @@ namespace EF
                 MessageBox.Show(G16_ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }//limpia los cuadros de texto
+        public bool Validaciones()
+        {
+            if (ContadorRecursivo(txtDNI.Text, 0) != 8)
+            {
+                MessageBox.Show("El DNI debe contener exactamente 8 dígitos numéricos.");
+                return true;
+            }
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("Rellenar el campo de Nombres.");
+                return true;
+            }
+            if (string.IsNullOrEmpty(txtApellidos.Text))
+            {
+                MessageBox.Show("Rellenar el campo de Apellidos.");
+                return true;
+            }
+            if (ContadorRecursivo(txtCelular.Text, 0) != 9)
+            {
+                MessageBox.Show("El Celular debe contener exactamente 9 dígitos numéricos.");
+                return true;
+            }
+            return false;
+
+        }//Comprueva si los campos cumplen con los requisitos
+        public int ContadorRecursivo(string G16_Textbox, int G16_Indice)
+        {
+            // Condición de parada
+            if (G16_Indice >= G16_Textbox.Length)
+                return 0;
+
+            // Si el carácter es dígito, suma 1
+            if (char.IsDigit(G16_Textbox[G16_Indice]))
+            {
+
+                return 1 + ContadorRecursivo(G16_Textbox, G16_Indice + 1);
+            }
+            else
+            {
+                return ContadorRecursivo(G16_Textbox, G16_Indice + 1);
+            }
+        }//Cuenta la cantidad numeros que contiene el textbox y evita los caracteres
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -72,8 +119,11 @@ namespace EF
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
+            
             try
             {
+                if (Validaciones()) { return; }
                 var G16_proExisDn = clCliente.G16_Cli.FirstOrDefault(G16_p => G16_p.G16_DNI ==Convert.ToDouble(txtDNI.Text));
                 var G16_proExisNo = clCliente.G16_Cli.FirstOrDefault(G16_p => G16_p.G16_DNI == Convert.ToDouble(txtDNI.Text) &&
                                                                         G16_p.G16_Nombres == txtNombre.Text.Trim());
@@ -166,5 +216,6 @@ namespace EF
                 MessageBox.Show(G16_ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
+
     }    
 }

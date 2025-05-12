@@ -25,5 +25,10 @@ namespace EF
                 G16_Celular = G16_Cel             
             });
         }
+
+        public string NombreCompleto
+        {
+            get { return G16_Nombres + " " + G16_Apellidos; }
+        }//obtener el nombre completo en las listas
     }
 }
