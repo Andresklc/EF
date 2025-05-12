@@ -8,11 +8,11 @@ namespace EF
 {
     internal class clVenta
     {
-        public int G16_IdVenta { get; set; }           // ID de la venta
-        public int G16_DNI { get; set; }           // DNI del cliente
-        public List<clProductoVendido> G16_Prod { get; set; }  // Lista de productos vendidos
+        public int G16_IdVenta { get; set; }// ID de la venta
+        public int G16_DNI { get; set; }// DNI del cliente
+        public List<clProductoVendido> G16_Prod { get; set; }// Lista de productos vendidos
 
-        public double G16_PrecioTotal { get; set; }   // Precio total de la venta
+        public double G16_PrecioTotal { get; set; }// Precio total de la venta
 
         public clVenta(int G16_idVen, int G16_dni, List<clProductoVendido> G16_prod)
         {
