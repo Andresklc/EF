@@ -28,7 +28,18 @@ namespace EF
             try
             {
                 dgvClientes.DataSource = null;
-                dgvClientes.DataSource = clCliente.G16_Cli;
+
+                // Crear una lista temporal solo con los campos deseados (sin nombre completo)
+                var listaFiltrada = clCliente.G16_Cli.Select(c => new
+                {
+                    DNI = c.G16_DNI,
+                    Nombres = c.G16_Nombres,
+                    Apellidos = c.G16_Apellidos,
+                    Celular = c.G16_Celular
+                    // NO se incluye la propiedad NombreCompleto
+                }).ToList();
+
+                dgvClientes.DataSource = listaFiltrada;
                 dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvClientes.ClearSelection();
             }
@@ -56,7 +67,7 @@ namespace EF
         }//limpia los cuadros de texto
         public bool Validaciones()
         {
-            if (ContadorRecursivo(txtDNI.Text, 0) != 8)
+            if (!ValidarDNIRecursivo(txtDNI.Text))
             {
                 MessageBox.Show("El DNI debe contener exactamente 8 dígitos numéricos.");
                 return true;
@@ -71,7 +82,7 @@ namespace EF
                 MessageBox.Show("Rellenar el campo de Apellidos.");
                 return true;
             }
-            if (ContadorRecursivo(txtCelular.Text, 0) != 9)
+            if (!ValidarCelularRecursivo(txtCelular.Text))
             {
                 MessageBox.Show("El Celular debe contener exactamente 9 dígitos numéricos.");
                 return true;
@@ -79,23 +90,27 @@ namespace EF
             return false;
 
         }//Comprueva si los campos cumplen con los requisitos
-        public int ContadorRecursivo(string G16_Textbox, int G16_Indice)
+        //Cuenta la cantidad numeros que contiene el textbox y evita los caracteres↓
+        public bool ValidarDNIRecursivo(string G16_Texto, int G16_Indice = 0, int G16_Contador = 0)
         {
-            // Condición de parada
-            if (G16_Indice >= G16_Textbox.Length)
-                return 0;
+            if (G16_Indice >= G16_Texto.Length)
+                return G16_Contador == 8;
 
-            // Si el carácter es dígito, suma 1
-            if (char.IsDigit(G16_Textbox[G16_Indice]))
-            {
-
-                return 1 + ContadorRecursivo(G16_Textbox, G16_Indice + 1);
-            }
+            if (char.IsDigit(G16_Texto[G16_Indice]))
+                return ValidarDNIRecursivo(G16_Texto, G16_Indice + 1, G16_Contador + 1);
             else
-            {
-                return ContadorRecursivo(G16_Textbox, G16_Indice + 1);
-            }
-        }//Cuenta la cantidad numeros que contiene el textbox y evita los caracteres
+                return ValidarDNIRecursivo(G16_Texto, G16_Indice + 1, G16_Contador);
+        }
+        public bool ValidarCelularRecursivo(string G16_Texto, int G16_Indice = 0, int G16_Contador = 0)
+        {
+            if (G16_Indice >= G16_Texto.Length)
+                return G16_Contador == 9;
+
+            if (char.IsDigit(G16_Texto[G16_Indice]))
+                return ValidarCelularRecursivo(G16_Texto, G16_Indice + 1, G16_Contador + 1);
+            else
+                return ValidarCelularRecursivo(G16_Texto, G16_Indice + 1, G16_Contador);
+        }
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try

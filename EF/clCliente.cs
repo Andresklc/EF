@@ -17,6 +17,13 @@ namespace EF
 
 
         public static List<clCliente> G16_Cli = new List<clCliente>();
+        private string dni;
+        private string nombres;
+        private string apellidos;
+        private string celular;
+
+
+
         public static void agregarCliente(int G16_DN,string G16_No, string G16_Ap, int G16_Cel)
         {
             G16_Cli.Add(new clCliente{

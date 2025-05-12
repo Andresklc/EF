@@ -94,5 +94,17 @@ namespace EF
         {
             MessageBox.Show("VERSION G16 0.1 \nSi ve esto profe un saludo no eh dormido en 2 dias by Andres", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void clientesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmImportarClientes frmImCli = new FrmImportarClientes();
+            frmImCli.Show();
+        }
+
+        private void productosToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmImportaProductos frmImPro=new FrmImportaProductos();
+            frmImPro.Show();
+        }
     }
 }

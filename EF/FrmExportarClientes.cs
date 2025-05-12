@@ -25,8 +25,8 @@ namespace EF
             txtVista.Text = "Lista de Clientes\r\n";
             foreach (var G16_clie in clCliente.G16_Cli)
             {
-                string linea = $"DNI: {G16_clie.G16_DNI} - Nombre: {G16_clie.G16_Nombres} {G16_clie.G16_Apellidos} - Celular: {G16_clie.G16_Celular}";
-                txtVista.AppendText(linea + Environment.NewLine); // Agrega cada línea con salto
+                string G16_linea = $"{G16_clie.G16_DNI},{G16_clie.G16_Nombres},{G16_clie.G16_Apellidos},{G16_clie.G16_Celular}";
+                txtVista.AppendText(G16_linea + Environment.NewLine); // Agrega cada línea con salto
             }
         }
         private void btnSelecion_Click(object sender, EventArgs e)
@@ -64,6 +64,8 @@ namespace EF
                 }
                 txtDireccionPC.Clear();
                 MessageBox.Show($"El listado {txtNombre.Text.ToString()}.txt fue guardado exitosamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmExportarClientes G16_frm = new FrmExportarClientes();
+                G16_frm.Close();
             }
             catch (Exception G16_ex)
             {

@@ -75,6 +75,18 @@
     <Compile Include="FrmExportarProductos.Designer.cs">
       <DependentUpon>FrmExportarProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmImportaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportaProductos.Designer.cs">
+      <DependentUpon>FrmImportaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImportarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportarClientes.Designer.cs">
+      <DependentUpon>FrmImportarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmExportarProductos.resx">
       <DependentUpon>FrmExportarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportaProductos.resx">
+      <DependentUpon>FrmImportaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportarClientes.resx">
+      <DependentUpon>FrmImportarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
